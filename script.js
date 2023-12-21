@@ -1,5 +1,6 @@
 let mode = "X";
 let buttons = document.querySelectorAll(".gameButton");
+let drawChecker =0;
 let winCondition =[
     [0,1,2],
     [3,4,5],
@@ -15,6 +16,7 @@ for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", () => {
         if (buttons[i].innerText !== "X" && buttons[i].innerText !== "O") {
             buttons[i].innerText = mode;
+            drawChecker++;
             mode = (mode === "X") ? "O" : "X";
         }
         setTimeout(()=>{
@@ -33,6 +35,16 @@ const checkWinning=()=>{
                     }
                     alert(`${buttons[pattern[1]].innerText} is the winner`);
             }
+            else{
+                if(drawChecker==9){
+                    for(eachButton of buttons){
+                        eachButton.disabled = true;                                              // when draw disabling all the buttons
+                    }
+                    alert(`Its a Draw`);
+                    drawChecker=0;
+
+                }
+            }
         }
     }
 }
@@ -43,6 +55,7 @@ resetButton.addEventListener("click",()=>{
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].innerText = "";
         buttons[i].disabled=false;
+        drawChecker=0;
     }
 });
 
