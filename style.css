@@ -1,0 +1,34 @@
+h1{
+    text-align: center;
+}
+table{
+    /* border: 1px solid black; */
+    margin: auto;
+    
+}
+.main{
+    margin:auto;
+}
+
+tr,td{
+    padding: 10px;
+    /* background-color: wheat; */
+}
+
+button{
+    height: 40px;
+    width: 120px;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 0 1rem rgb(0, 0, 0);
+    color: rgba(165, 42, 42, 0.808);
+}
+
+body{
+    background-color: rgba(12, 134, 93, 0.79);
+    text-align: center;
+}
+
+#reset{
+    justify-self:  center;
+}
