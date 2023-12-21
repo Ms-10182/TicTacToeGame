@@ -18,3 +18,11 @@ for (let i = 0; i < buttons.length; i++) {
         }
     });
 }
+
+let resetButton = document.querySelector("#reset");
+
+resetButton.addEventListener("click",()=>{
+    for (let i = 0; i < buttons.length; i++) {
+                buttons[i].innerText = "";
+    }
+});
