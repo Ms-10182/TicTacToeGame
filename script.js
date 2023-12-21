@@ -28,8 +28,8 @@ const checkWinning=()=>{
         if(buttons[pattern[0]].innerText=="X" || buttons[pattern[0]].innerText=="O"){   //checking if button is not compared when it is empty
             if(buttons[pattern[0]].innerText==buttons[pattern[1]].innerText &&
                 buttons[pattern[1]].innerText==buttons[pattern[2]].innerText){          //checking if 3 same symbol are in line or not
-                    for(a of buttons){
-                        a.disabled = true;                                              // when winner found disabling all the buttons
+                    for(eachButton of buttons){
+                        eachButton.disabled = true;                                              // when winner found disabling all the buttons
                     }
                     alert(`${buttons[pattern[1]].innerText} is the winner`);
             }
